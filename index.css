@@ -28,11 +28,17 @@ img {
     object-fit: cover;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 main {
-    display: flex;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 100px;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 div.card {
@@ -71,6 +77,11 @@ div.card {
 
         & h1 {
             font: var(--text-preset-1);
+
+            &:hover {
+                color: var(--yellow);
+                cursor: pointer;
+            }
         }
         & p {
             color: var(--gray500);
@@ -92,5 +103,19 @@ section.perfil {
 
     & p {
         font: var(--text-preset-3-bold);
+    }
+}
+
+footer {
+    padding-inline: 5px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 6px 6px black;
+
+    & a {
+        font: var(--text-preset-3-bold);
+        &:hover{
+        color: var(--yellow);
+        }
     }
 }
